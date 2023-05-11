@@ -16,18 +16,58 @@
   <body>
     <div class="login-page">
       <div class="form">
+        <!-- sign up -->
         <form action="" class="register-form">
-          <h2 class="form-title">Log in</h2>
-          <input type="text" placeholder="Username" />
-          <input type="password" placeholder="Password" />
-          <input type="email" placeholder="Email Id" />
-          <button>Join Now</button>
+          <h2 class="form-title">Sign Up</h2>
+          <input 
+            type="text"  
+            placeholder="Enter your name" 
+            name="username"
+            id="username"
+            />
+            <input
+            name="email"
+            type="email"
+            placeholder="Email address"
+            id="email"
+            />
+            <input 
+            name="department"
+            type="text" 
+            placeholder="Enter Your Department"
+            id="department"
+            />
+
+              <!-- <select 
+              name="department" 
+              id="department" 
+              name="department"
+              >
+              <option value="" disabled selected hidden>Please Choose..</option>  
+            </select> -->
+
+            <input 
+            name="semester"
+            type="number" 
+            placeholder="Enter Your semester"
+            id="semester"
+            min="1" 
+            max="8"
+            />
+            <input 
+              type="password" 
+              placeholder="Password" 
+              name="password"
+              id="password"
+            />
+          <button id="sign-up">Join Now</button>
           <hr />
           <span>or</span>
           <hr />
-          <p class="message">Already Registered?<a href="#">Log in</a></p>
+          <p class="message">Already Registered?<a href="#"> Log in</a></p>
         </form>
 
+        <!-- login -->
         <form action="" class="login-form">
           <h2 class="form-title">Log in</h2>
           <input
@@ -37,12 +77,12 @@
             id="email"
           />
           <input
-            name="Password"
-            type="text"
+            name="password"
+            type="password"
             placeholder="Enter Password"
             id="password"
           />
-          <button class="signup-btn" id="submit">Log in</button>
+          <button id="login">Log in</button>
           <hr />
           <span>or</span>
           <hr />
@@ -61,5 +101,7 @@
   <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+
   <script src="index.js"></script>
 </html>
