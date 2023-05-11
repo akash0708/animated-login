@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animated Login and Sign Up Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="login-page">
+      <div class="form">
+        <form action="" class="register-form">
+          <h2 class="form-title">Log in</h2>
+          <input type="text" placeholder="Username" />
+          <input type="password" placeholder="Password" />
+          <input type="email" placeholder="Email Id" />
+          <button>Join Now</button>
+          <hr />
+          <span>or</span>
+          <hr />
+          <p class="message">Already Registered?<a href="#">Log in</a></p>
+        </form>
+
+        <form action="" class="login-form">
+          <h2 class="form-title">Log in</h2>
+          <input
+            name="email"
+            type="email"
+            placeholder="Email address or phone number"
+            id="email"
+          />
+          <input
+            name="Password"
+            type="text"
+            placeholder="Enter Password"
+            id="password"
+          />
+          <button class="signup-btn" id="submit">Log in</button>
+          <hr />
+          <span>or</span>
+          <hr />
+          <p class="message">New on Upgrades? <a href="#">Sign up</a></p>
+        </form>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+      $(".message a").click(function () {
+        $("form").animate({ height: "toggle", opacity: "toggle" }, "slow");
+      });
+    </script>
+  </body>
+  <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
+  <script src="index.js"></script>
+</html>
